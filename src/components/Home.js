@@ -1,5 +1,4 @@
-import React from 'react';  
-import profileImage from 'portfolio/public/images/yo.png';   
+import React from 'react';     
 
 const Home = () => {  
     return (  
@@ -13,7 +12,7 @@ const Home = () => {
                 Desde 2022, he experimentado con varios lenguajes de programación y tecnologías, actualmente me he enfocado en el desarrollo web de interfaces intuitivas y receptivas.</p>  
             </section>  
             <div className="image-container">  
-                <img src={profileImage} alt="Perfil" className="profile-image" />  
+                <img src= "/images/yo.png" alt="Foto de perfil" />  
             </div> 
         </section> 
     );  

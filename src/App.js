@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import 'portfolio/src/App.css';
-import Header from 'portfolio/src/components/Header.js';  
-import About from 'portfolio/src/components/About.js';  
-import Projects from 'portfolio/src/components/Projects.js';  
-import Contact from 'portfolio/src/components/Contact.js';  
-import Home from 'portfolio/src/components/Home.js'; 
+//import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import Header from './components/Header';  
+import About from './components/About';  
+import Projects from './components/Projects';  
+import Contact from './components/Contact';  
+import Home from './components/Home'; 
 //import Blog from './components/Blog'; 
-import Footer from 'portfolio/src/components/Footer.js';
+import Footer from './components/Footer';
 
 
 

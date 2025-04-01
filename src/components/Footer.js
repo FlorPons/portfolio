@@ -1,5 +1,4 @@
-import React from 'react';  
-import 'portfolio/src/App.css';  
+import React from 'react';    
 
 const Footer = () => {  
     return (  

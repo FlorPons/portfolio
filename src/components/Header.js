@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';  
-import 'portfolio/src/App.css';
+import React, { useEffect, useState } from 'react';   
 import { motion } from 'framer-motion';
-import banner from 'portfolio/public/images/banner.png';
 
 const Header = () => {  
     const [isSticky, setIsSticky] = useState(false);  
@@ -28,7 +26,7 @@ const Header = () => {
                 animate={{ opacity: 1 }}  
                 transition={{ duration: 0.5 }}  
                 style={{  
-                    backgroundImage: `url(portfolio/public/images/banner.png)`,  
+                    backgroundImage: `url(/images/banner.png)`,  
                     backgroundSize: 'cover',  
                     backgroundPosition: 'center',  
                 }}>  

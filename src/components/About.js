@@ -1,18 +1,14 @@
 import React from 'react'; 
-import figureImage from 'portfolio/public/images/figure1.gif';
-import figureImage2 from 'portfolio/public/images/2.png';
-import figureImage3 from 'portfolio/public/images/7.png';
-import figureImage4 from 'portfolio/public/images/5.png';
 
 const About = () => {  
     return ( 
         <div style={{ display: 'flex', alignItems: 'center'}}>
         <div className="about-container">  
-        <img src={figureImage} alt="" className="figure-image" />
-        <img src={figureImage2} alt="" className="figure-image2" />
-        <img src={figureImage4} alt="" className="figure-image4" />
-        <img src={figureImage2} alt="" className="figure-image2" />
-        <img src={figureImage3} alt="" className="figure-image3" />
+        <img src="/images/6.png" alt=""/>
+        <img src="/images/2.png" alt=""/>
+        <img src="/images/7.png" alt=""/>
+        <img src="/images/2.png" alt=""/>
+        <img src="/images/5.png" alt=""/>
         </div>
         
         <section id='about'style={{ flexGrow: 1 }}>  
