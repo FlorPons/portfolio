@@ -1,32 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import 'portfolio/src/App.css';
+import Header from 'portfolio/src/components/Header.js';  
+import About from 'portfolio/src/components/About.js';  
+import Projects from 'portfolio/src/components/Projects.js';  
+import Contact from 'portfolio/src/components/Contact.js';  
+import Home from 'portfolio/src/components/Home.js'; 
+//import Blog from './components/Blog'; 
+import Footer from 'portfolio/src/components/Footer.js';
 
-function Home() {
-  return <h2>Home</h2> ;
-}
-function About() {
-  return <h2>About</h2>;
-}
-function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-export default App;
+
+
+
+function App() {  
+  return (  
+      <div className="App">  
+          <Header/>  
+          <main>  
+              <Home />        
+              <About />  
+              <Projects />
+              <Contact />  
+          </main>  
+          <Footer />  
+      </div>  
+  );  
+}  
+
+export default App;  
