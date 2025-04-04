@@ -26,7 +26,7 @@ const Header = () => {
                 animate={{ opacity: 1 }}  
                 transition={{ duration: 0.5 }}  
                 style={{  
-                    backgroundImage: `url(/images/banner.png)`,  
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner.png)`,  
                     backgroundSize: 'cover',  
                     backgroundPosition: 'center',  
                 }}>  

@@ -137,46 +137,46 @@ p {
 }  
 
 /* Estilos para las imágenes */
-.image-container {  
-  display: flex;   
-  justify-content: center; 
-  margin: 25px;   
-}  
-
-.profile-image {  
-  width: 300px;  
+.profile-image {          
+  width: 50%; 
+  max-width: 200px; 
   height: auto; 
   border-radius: 50%; 
-  border: 5px solid #f4759d;  
-  object-fit: cover; /* Mantiene la relación de aspecto recortando la imagen si es necesario */  
+  border: 5px solid #f4759d;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {  
+  width: 100%;   
+  height: auto;  
+  border-radius: 50%;  
+  object-fit: cover; 
 }  
 
 .about-container {  
   display: flex;  
   flex-direction: column;
   margin: 5px;
-  width: 20%;
+  width: 50%;
   justify-content: space-between; 
-  align-self: stretch;   
+  align-self: stretch; 
+  padding: 10px;  
 }  
 
-.about-image {  
-  width: 300px;  
-  height: auto; 
-  border-radius: 5%; 
-  border: 5px solid #f4759d;    
-} 
-
-.figure-image2{
-  width: 60px;
+.image1, .image3, .image5{
+  width: 90%;
   height: auto;
-  display: flex;
   align-self: center;
+  margin:5% auto;
 }
-.figure-image, .figure-image3{   
+.image2, .image4{   
+  width: 30%;
+  height: auto;
   display: flex;  
   justify-content: center; 
-  margin: 25px;   
+  margin: 10% auto;   
 } 
 
 /* Estilos para la navegación */  
@@ -206,7 +206,7 @@ a:hover {
 
 .projects{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   flex-wrap: wrap;
   margin: -10px;
 }
