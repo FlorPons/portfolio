@@ -12,7 +12,7 @@ const Contact = () => {
                     <FaEnvelope /> Email </a>
                 </li>  
                 <li>
-                    <a href="linkedin.com/in/maria-florencia-pons" target="_blank" rel="noopener noreferrer">  
+                    <a href="https://www.linkedin.com/in/maria-florencia-pons/" target="_blank" rel="noopener noreferrer">  
                     <FaLinkedin /> LinkedIn </a>
                 </li>   
                 <li>
