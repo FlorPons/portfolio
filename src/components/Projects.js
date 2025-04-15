@@ -13,35 +13,35 @@ const projectsData = [
         description: "Este proyecto busca cumplir la función detección de enfermedades en plantas basado en Inteligencia Artificial mediante redes neuronales convolucionales (CNN). El proyecto cuenta con un backend FastAPI para servir predicciones y una interfaz Streamlit para la interacción del usuario. El modelo, entrenado en un conjunto de datos de imágenes de plantas, está optimizado para la identificación de enfermedades en tiempo real.",  
         technologies: "Python, FastAPI, Streamlit, TensorFlow, Keras",
         image: <img src= {process.env.PUBLIC_URL + "/images/6.png"} alt= "Imagen del proyecto Plant Disease Detector" className="project-image"/>,   
-        link: ""   
+        link: "https://github.com/FlorPons/PlantDiseaseDetector"   
     },  
     {  
         title: "Stylish Steps",  
         description: "Este proyecto fue realizado en marco del curso FullStack Node.js de Codo a Codo 4.0 durante el primer semestre de 2024. En él realizamos un e-commerce llamado Stylish Steps de venta de zapatillas para hombres, mujeres y niños.",  
         technologies: "HTLM5, CSS3, JavaScript, Boostrap", 
         image: <img src= {process.env.PUBLIC_URL + "/images/StylishSteps.png"} alt= "Imagen de la webapp StylishSteps" className="project-image" />,  
-        link: ""  
+        link: "https://github.com/FlorPons/EcommerceStylishSteps"  
     },  
     {  
         title: "Cute Paws",  
         description: "Cute Paws es una página web de una tienda de mascotas creada en el marco del curso Full Stack Python del programa Codo a Codo 4.0.",  
         technologies: "HTLM5, CSS3, JavaScript, Boostrap",
         image: <img src= {process.env.PUBLIC_URL + "/images/CutePaws.png"} alt= "Imagen de la webapp Cute Paws" className="project-image" />,   
-        link: ""  
+        link: "https://github.com/FlorPons/CutePaws"  
     },  
     {  
         title: "Mood Melody",  
         description: "MoodMelody, es un proyecto desarrollado para crear y reproducir playlists de música adaptadas a tu estado de ánimo. Con una interfaz amigable e intuitiva, permite seleccionar tu estado emocional diario y recibir recomendaciones musicales personalizadas.",  
         technologies: "React,Java, HTLM5, CSS3, JavaScript, Boostrap",
         image: <img src= {process.env.PUBLIC_URL + "/images/MoodMelody.png"} alt= "Imagen de la webapp Mood Melody" className="project-image" />,    
-        link: ""  
+        link: "https://github.com/FlorPons/MoodMelody"  
     },  
     {  
         title: "StreaMaster",  
         description: "StreaMaster es una plataforma que permite encontrar peliculas y series de diferentes plataformas en un solo lugar. Con una interfaz amigable e intuitiva, permite buscar y filtrar contenido de diferentes plataformas de streaming.Este proyecto fue desarrollado en el marco del curso de Diseno UX/UI del programa Codo a Codo 4.0.",  
         technologies: "Figma, Canva",
         image: <img src= {process.env.PUBLIC_URL + "/images/StreaMaster.png"} alt= "Imagen de la webapp StreaMaster" className="project-image"/>,   
-        link: ""  
+        link: " "  
     }  
 ];  
 const Projects = () => {  
