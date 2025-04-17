@@ -20,7 +20,7 @@ const projectsData = [
         description: "Este proyecto fue realizado en marco del curso FullStack Node.js de Codo a Codo 4.0 durante el primer semestre de 2024. En él realizamos un e-commerce llamado Stylish Steps de venta de zapatillas para hombres, mujeres y niños.",  
         technologies: "HTLM5, CSS3, JavaScript, Boostrap", 
         image: <img src= {process.env.PUBLIC_URL + "/images/StylishSteps.png"} alt= "Imagen de la webapp StylishSteps" className="project-image" />,  
-        link: "https://github.com/FlorPons/EcommerceStylishSteps"  
+        link: "https://e-commerce-zapatillas-lc7t.vercel.app/"  
     },  
     {  
         title: "Cute Paws",  
