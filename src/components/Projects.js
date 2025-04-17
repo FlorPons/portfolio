@@ -13,7 +13,7 @@ const projectsData = [
         description: "Este proyecto busca cumplir la función detección de enfermedades en plantas basado en Inteligencia Artificial mediante redes neuronales convolucionales (CNN). El proyecto cuenta con un backend FastAPI para servir predicciones y una interfaz Streamlit para la interacción del usuario. El modelo, entrenado en un conjunto de datos de imágenes de plantas, está optimizado para la identificación de enfermedades en tiempo real.",  
         technologies: "Python, FastAPI, Streamlit, TensorFlow, Keras",
         image: <img src= {process.env.PUBLIC_URL + "/images/6.png"} alt= "Imagen del proyecto Plant Disease Detector" className="project-image"/>,   
-        link: "https://github.com/FlorPons/PlantDiseaseDetector"   
+        link: process.env.PUBLIC_URL + "/images/PlantDeseaseDetector.pdf"  
     },  
     {  
         title: "Stylish Steps",  
