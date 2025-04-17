@@ -41,7 +41,7 @@ const projectsData = [
         description: "StreaMaster es una plataforma que permite encontrar peliculas y series de diferentes plataformas en un solo lugar. Con una interfaz amigable e intuitiva, permite buscar y filtrar contenido de diferentes plataformas de streaming.Este proyecto fue desarrollado en el marco del curso de Diseno UX/UI del programa Codo a Codo 4.0.",  
         technologies: "Figma, Canva",
         image: <img src= {process.env.PUBLIC_URL + "/images/StreaMaster.png"} alt= "Imagen de la webapp StreaMaster" className="project-image"/>,   
-        link: " "  
+        link: process.env.PUBLIC_URL + "/images/StreaMasterApp.pdf"  
     }  
 ];  
 const Projects = () => {  
@@ -54,7 +54,7 @@ const Projects = () => {
                         <article>  
                             <h3>{project.title}</h3>  
                             <p>{project.description}</p>  
-                            <h4>{project.technologies} Tecnologías empleadas</h4>   
+                            <h4>{project.technologies}</h4>   
                             <a href={project.link} target="_blank" rel="noopener noreferrer">  
                             {project.image}    
                                 <br/> Ver Proyecto  
