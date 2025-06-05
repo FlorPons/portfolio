@@ -42,7 +42,14 @@ const projectsData = [
         technologies: "Figma, Canva",
         image: <img src= {process.env.PUBLIC_URL + "/images/StreaMaster.png"} alt= "Imagen de la webapp StreaMaster" className="project-image"/>,   
         link: process.env.PUBLIC_URL + "/images/StreaMasterApp.pdf"  
-    }  
+    },  
+    {  
+        title: "Análisis de tipo de contenido de Netflix",  
+        description: "Este proyecto fue realizado en marco del curso Big Data de Codo a Codo 4.0 durante el segundo semestre de 2022. En él realizamos un análisis de una base de datos de Netflix usando diferentes gráficos, estadísticas y filtros.",  
+        technologies: "Looker Studio, fuente de datos en archivo csv", 
+        image: <img src= {process.env.PUBLIC_URL + "/images/Netflix.png"} alt= "Imagen" className="project-image" />,  
+        link: "https://lookerstudio.google.com/reporting/282aa87d-ac21-487a-b131-7e7962f79321"  
+    },
 ];  
 const Projects = () => {  
     return (  
