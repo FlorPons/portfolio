@@ -1,8 +1,16 @@
 import React from 'react'; 
+import {motion} from "framer-motion";
 
-const About = () => {  
-    return ( 
-        <div style={{ display: 'flex', alignItems: 'center'}} id='about'>
+const About = () => (
+    <motion.section
+    id = "about"
+    initial={{ opacity: 0, y: 100 }} 
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }} 
+    viewport={{ once: true }}
+    style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}
+    >
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
             
             <div className="about-container">  
                 <img className="image1" src={`${process.env.PUBLIC_URL}/images/6.png`} alt="Imagen 6" />  
@@ -33,7 +41,7 @@ const About = () => {
                 <p>💻 Realicé mis prácticas profesionales en InKúa.<br/>
                 💻También participé con mucho entusiasmo en simulaciones laborales de No Country, 
                 donde desempeñé roles tanto como Desarrolladora Frontend como el rol de Team Leader acompañando dos equipos de desarrollo web.
-                Estas experiencias han fortalecido mi capacidad para trabajar en entornos colaborativos y dinámicos, así como para liderar equipos hacia el logro de objetivos comunes.<bre/>
+                Estas experiencias han fortalecido mi capacidad para trabajar en entornos colaborativos y dinámicos, así como para liderar equipos hacia el logro de objetivos comunes.<br/>
                 Me encantó trabajar con diferentes roles, con metodologías ágiles, presentaciones y documentación formal. Esto fortaleció mis habilidades blandas, aprendí mucho de mis coequipers e implementé conocimientos técnicos.</p>
                 <p>👩‍🏫 Mi experiencia previa al desarrollo web es en la docencia.<br/> 
                 Esta etapa que duró 10 años, me permitió desarrollar habilidades valiosas como la paciencia, la empatía y el trabajo en equipo, que considero esenciales en el ámbito del desarrollo web y en cualquier ámbito laboral.<br/> 
@@ -42,8 +50,8 @@ const About = () => {
                 Mi objetivo profesional es crear aplicaciones web que ofrezcan experiencias interesantes para los usuarios. 
                 Actualmente, busco oportunidades en el sector IT donde pueda aplicar mis conocimientos y contribuir a un equipo innovador.</p>
             </section>
-        </div>  
-    );  
-};  
+        </div>
+    </motion.section>  
+    );   
 
 export default About;   

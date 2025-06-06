@@ -8,24 +8,25 @@
   --h4-color: #22ffcb;
   --p-color: #fff;
   --icons-color:#93fce3;
-  --background-section: #000a0f; 
-  --background-p: #000e15;
+  --background-section: #000a0fb2; 
+  --background-p: #000e15cb;
   --background-footer: #333; 
 }  
 
-/* Header */ 
+/* Header
 
 .banner-container {  
   position: relative;  
 } 
 
 .banner {  
-  width: 100%;   
-  height: 300px;  
+  width: 91vw;   
+  height: 90vh;  
   display: flex;   
   justify-content: center;   
-  align-items: center;  
-}
+  align-items: center;
+  padding:50px;  
+}*/
 
 nav {  
   position: absolute; 
@@ -81,6 +82,16 @@ nav a:hover {
   color: #fff; 
 }  
 
+#starfield{
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  width: 100vw;  
+  height: 100vh;   
+  z-index: -1;  
+  pointer-events:none; 
+}
+
 /* Estilos globales */  
 body {  
   display: flex;
@@ -88,7 +99,8 @@ body {
   margin: 0; 
   padding: 0;
   height: 100vh; 
-  background-image: url('../public/images/background.png'); 
+  /*background-image: url('../public/images/background.png'); */
+  background-color:#032966b9; 
   background-size: cover;   
   background-position: center;  
   background-repeat: no-repeat; 
@@ -100,9 +112,9 @@ body {
 section {  
   margin: 40px; 
   padding: 30px;   
-  background-color: var(--background-section);  
   border-radius: 15px;   
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.513);   
+  background-color: var(--background-section);  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  
   transition: transform 0.3s ease;  
 }  
 
@@ -225,14 +237,20 @@ a:hover {
   justify-content:space-between;
   flex-wrap: wrap;
   margin: -10px;
+  max-width: 1200px;
 }
 
 .project-container {   
-  margin: 10px; 
-  flex: 1 1 300px;  
-  border-radius: 10px;  
+  margin: 30px 10px 10px 10px; 
+  flex: 1 1 300px;
+  max-width: 350px;  
+  min-width: 280px;
+  border-radius: 10px; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 } 
 
 .project-container:hover {  
@@ -240,11 +258,19 @@ a:hover {
 }  
 
 /* Estilo de las imágenes de los proyectos */  
+
 .project-image {  
   width: 50%; 
   height: auto;   
   border-radius: 10px;
-}    
+} 
+
+.project-container article {  
+  padding: 20px;  
+  background-color:var(--background-section);  
+  border-radius: 10px;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+}
 
 /* Estilo para los enlaces de proyección */  
 .project-container a {  

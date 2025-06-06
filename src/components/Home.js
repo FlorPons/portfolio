@@ -1,7 +1,15 @@
-import React from 'react';     
+import React from 'react';  
+import {motion} from "framer-motion";   
 
-const Home = () => {  
-    return (  
+const Home = () => (  
+    <motion.section 
+        id="home"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}
+    >
         <div style={{ display: 'flex', alignItems: 'center' }} id="home">  
             <section style={{ flexGrow: 1 }}>   
                 <h1>Bienvenido a mi Portfolio</h1>  
@@ -15,7 +23,7 @@ const Home = () => {
             <img src={`${process.env.PUBLIC_URL}/images/yo.png`} alt="Foto de perfil" />  
             </div>  
         </div> 
-    );  
-};  
+    </motion.section> 
+);
 
 export default Home;    

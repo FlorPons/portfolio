@@ -1,7 +1,7 @@
 import React from 'react';
 //import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';  
+//import Header from './components/Header';  
 import About from './components/About';  
 import Projects from './components/Projects';  
 import Contact from './components/Contact';  
@@ -13,18 +13,21 @@ import Footer from './components/Footer';
 
 
 function App() {  
-  return (  
-      <div className="App">  
-          <Header/>  
-          <main>  
-              <Home />        
-              <About />  
-              <Projects />
-              <Contact />  
-          </main>  
-          <Footer />  
-      </div>  
-  );  
+    return ( 
+    <>
+    <canvas id= "starfield"></canvas> 
+    <div className="App">  
+        { /*<Header/>*/}
+        <main>  
+            <Home />        
+            <About />  
+            <Projects />
+            <Contact />  
+        </main>  
+        <Footer />  
+    </div> 
+    </> 
+    );  
 }  
 
 export default App;  
