@@ -1,54 +1,40 @@
-import React, { useEffect, useState } from 'react';   
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
-const Header = () => {  
-    const [isSticky, setIsSticky] = useState(false);  
+const Header = () => {
+    const [isSticky, setIsSticky] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleScroll = () => {  
-        const bannerHeight = document.querySelector('.banner').offsetHeight;  
-        const scrollTop = window.scrollY;  
-        setIsSticky(scrollTop >= bannerHeight);  
-    };  
+  // Sticky navbar al hacer scroll
+    useEffect(() => {
+    const handleScroll = () => {
+        setIsSticky(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-    useEffect(() => {  
-        window.addEventListener('scroll', handleScroll);  
+  // Cierra el menú al navegar
+    const handleNavClick = () => setMenuOpen(false);
 
-        return () => {  
-            window.removeEventListener('scroll', handleScroll);  
-        };  
-    }, []);  
+    return (
+    <header>
+        <nav className={`${isSticky ? 'sticky' : ''} ${menuOpen ? 'open' : ''}`}>
+        <button
+            className="nav-toggle"
+            aria-label="Abrir menú"
+            onClick={() => setMenuOpen(!menuOpen)}
+        >
+            ☰
+        </button>
+        <ul onClick={handleNavClick}>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Mis proyectos</a></li>
+            <li><a href="#contact">Conectemos</a></li>
+        </ul>
+        </nav>
+    </header>
+    );
+};
 
-    return (  
-        <div className="banner-container">  
-            <motion.div  
-                className="banner"  
-                initial={{ opacity: 0 }}  
-                animate={{ opacity: 1 }}  
-                transition={{ duration: 0.5 }}  
-                style={{  
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner.png)`,  
-                    backgroundSize: 'cover',  
-                    backgroundPosition: 'center',  
-                }}>  
-            </motion.div>  
-            <nav className={isSticky ? 'sticky' : ''}>  
-                <ul>  
-                    <li>  
-                        <a href="#home">Home</a>  
-                    </li>  
-                    <li>  
-                        <a href="#about">Sobre mí</a>  
-                    </li>  
-                    <li>  
-                        <a href="#projects">Mis proyectos</a>  
-                    </li>    
-                    <li>  
-                        <a href="#contact">Conectemos</a>  
-                    </li>  
-                </ul>  
-            </nav>      
-        </div>  
-    );  
-};  
-
-export default Header;  
+export default Header;

@@ -61,7 +61,7 @@ const Projects = () => {
                     <motion.div 
                         className="project-card"
                         key={index}
-                        initial={{ opacity: 0, y: 40 }}
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: index * 0.1, type: "spring" }}
                         viewport={{ once: true, amount: 0.2 }}
