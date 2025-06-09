@@ -67,21 +67,25 @@ const About = () => {
 return (
     <motion.section
     id="about"
-    initial={{ opacity: 0, y: 100 }}
+    className="about-section"
+    initial="hidden"
+    whileInView="visible"
+    viewport= {{ once: false, amount: 0.5 }}
+    style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+    
+    {/*initial={{ opacity: 0, y: 80 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1.2, type: "spring" }}
-    viewport={{ once: true, amount: 0.2 }}
-    className="about-section"
-    >
+    viewport={{ once: true, amount: 0.2 }}*/}
+    
     <div className="about-content">
         <motion.div
         className="about-images"
-        initial={{ opacity: 0, x: -60 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.2, type: "spring" }}
-        viewport={{ once: false, amount: 0.4 }}
-        >
-        {images.map((img, idx) => (
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, delay: 0.1, type: "spring" }}
+        viewport={{ once: false, amount: 0.5 }}>
+            {images.map((img, idx) => (
             <motion.img
             key={idx}
             src={`${process.env.PUBLIC_URL}${img.src}`}
