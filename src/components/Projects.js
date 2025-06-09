@@ -1,4 +1,5 @@
-import React from 'react';     
+import React from 'react';  
+import { motion } from "framer-motion";   
 
 const projectsData = [  
     {  
@@ -10,14 +11,14 @@ const projectsData = [
     },  
     {  
         title: "Plant Disease Detector (Vision Computer)",  
-        description: "Este proyecto busca cumplir la función detección de enfermedades en plantas basado en Inteligencia Artificial mediante redes neuronales convolucionales (CNN). El proyecto cuenta con un backend FastAPI para servir predicciones y una interfaz Streamlit para la interacción del usuario. El modelo, entrenado en un conjunto de datos de imágenes de plantas, está optimizado para la identificación de enfermedades en tiempo real.",  
+        description: "Este proyecto de Vision Computer busca cumplir la función detección de enfermedades en plantas basado en Inteligencia Artificial mediante redes neuronales convolucionales (CNN). El proyecto cuenta con un backend FastAPI para servir predicciones y una interfaz Streamlit para la interacción del usuario. El modelo, entrenado en un conjunto de datos de imágenes de plantas, está optimizado para la identificación de enfermedades en tiempo real.",  
         technologies: "Python, FastAPI, Streamlit, TensorFlow, Keras",
         image: <img src= {process.env.PUBLIC_URL + "/images/6.png"} alt= "Imagen del proyecto Plant Disease Detector" className="project-image"/>,   
         link: process.env.PUBLIC_URL + "/images/PlantDeseaseDetector.pdf"  
     },  
     {  
         title: "Stylish Steps",  
-        description: "Este proyecto fue realizado en marco del curso FullStack Node.js de Codo a Codo 4.0 durante el primer semestre de 2024. En él realizamos un e-commerce llamado Stylish Steps de venta de zapatillas para hombres, mujeres y niños.",  
+        description: "Este proyecto fue realizado en el marco del curso FullStack Node.js de Codo a Codo 4.0 durante el primer semestre de 2024. En él realizamos un e-commerce llamado Stylish Steps de venta de zapatillas para hombres, mujeres y niños.",  
         technologies: "HTLM5, CSS3, JavaScript, Boostrap", 
         image: <img src= {process.env.PUBLIC_URL + "/images/StylishSteps.png"} alt= "Imagen de la webapp StylishSteps" className="project-image" />,  
         link: "https://e-commerce-zapatillas-lc7t.vercel.app/"  
@@ -38,7 +39,7 @@ const projectsData = [
     },  
     {  
         title: "StreaMaster",  
-        description: "StreaMaster es una plataforma que permite encontrar peliculas y series de diferentes plataformas en un solo lugar. Con una interfaz amigable e intuitiva, permite buscar y filtrar contenido de diferentes plataformas de streaming.Este proyecto fue desarrollado en el marco del curso de Diseno UX/UI del programa Codo a Codo 4.0.",  
+        description: "StreaMaster es una plataforma que permite encontrar peliculas y series de diferentes plataformas en un solo lugar. Con una interfaz amigable e intuitiva, permite buscar y filtrar contenido de diferentes plataformas de streaming. Este proyecto fue desarrollado en el marco del curso de Diseno UX/UI del programa Codo a Codo 4.0.",  
         technologies: "Figma, Canva",
         image: <img src= {process.env.PUBLIC_URL + "/images/StreaMaster.png"} alt= "Imagen de la webapp StreaMaster" className="project-image"/>,   
         link: process.env.PUBLIC_URL + "/images/StreaMasterApp.pdf"  
@@ -54,20 +55,29 @@ const projectsData = [
 const Projects = () => {  
     return (  
         <section id='projects'>   
-            <h2>Proyectos</h2>  
-            <div className='projects'>   
-                {projectsData.map((project, index) => (  
-                    <div className="project-container" key={index}>  
-                        <article>  
-                            <h3>{project.title}</h3>  
-                            <p>{project.description}</p>  
-                            <h4>{project.technologies}</h4>   
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">  
-                            {project.image}    
-                                <br/> Ver Proyecto  
-                            </a>  
-                        </article>  
-                    </div>  
+            <h2 className="projects-title">Proyectos</h2>  
+            <div className='projects-grid'>   
+                {projectsData.map((project, index) => ( 
+                    <motion.div 
+                        className="project-card"
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: index * 0.1, type: "spring" }}
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <div className="project-image-wrapper">
+                            {project.image} 
+                        </div> 
+                    <div className="project-info">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div className="project-tech"> {project.technologies} </div>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                            Ver Proyecto
+                        </a>    
+                    </div> 
+                    </motion.div> 
                 ))}  
             </div>  
         </section>  

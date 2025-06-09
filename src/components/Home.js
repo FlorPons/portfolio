@@ -1,28 +1,65 @@
 import React from 'react';  
 import {motion} from "framer-motion";   
 
-const Home = () => (  
+const frases = [
+  "👩‍💻 Web developer en crecimiento.",
+  "🚀 Aprendiendo y creando en la web desde 2022.",
+  "🌱 Explorando nuevas tecnologías cada día.",
+  "💻 Me apasiona el desarrollo web, especialmente el frontend y el diseño.",
+  "💡 Me encanta aportar ideas creativas.",
+];
+
+const Home = () => ( 
     <motion.section 
         id="home"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        initial="hidden"
+        whileInView="visible"
+        viewport= {{ once: false, amount: 0.5 }}
         style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}
-    >
-        <div style={{ display: 'flex', alignItems: 'center' }} id="home">  
-            <section style={{ flexGrow: 1 }}>   
-                <h1>Bienvenido a mi Portfolio</h1>  
-                <p>Aquí encontrarás información sobre mí, algunos proyectos y formas de contactarme. <br/>¡Explora y conóceme mejor!</p>  
-                <h2>Me llamo Florencia Pons</h2>  
-                <p>👩‍💻  
-                Soy una desarrolladora frontend junior, apasionada por crear apps y sitios web atractivos, estéticos e innovadores. <br/>   
-                Desde 2022, he experimentado con varios lenguajes de programación y tecnologías, actualmente me he enfocado en el desarrollo web de interfaces intuitivas y receptivas.</p>  
-            </section>   
-            <div className="profile-image" >  
-            <img src={`${process.env.PUBLIC_URL}/images/yo.png`} alt="Foto de perfil" />  
-            </div>  
-        </div> 
+        >
+        <div className= 'home-content'>
+            <div className="home-text">
+                <motion.p
+                className="saludo"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, delay: 0.1, type: "spring" }}
+                viewport={{ once: false, amount: 0.5 }}
+                >
+                ¡Hola!
+                </motion.p>
+                <motion.h1
+                className="nombre"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, delay: 0.2, type: "spring" }}
+                viewport={{ once: false, amount: 0.5 }}
+                >
+                Soy Florencia Pons
+                </motion.h1>
+
+                {frases.map((frase, idx) => (
+                <motion.h3
+                key={idx}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2, delay: 0.4, type: "spring" }}
+                viewport={{ once: false, amount: 0.5 }}
+                >
+                {frase}
+                </motion.h3>
+                ))}
+            </div>
+            <motion.div
+            className="logo-image"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, delay: 0.4, type: "spring" }}
+            viewport={{ once: false, amount: 0.5 }}
+            >
+            <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" /> 
+            </motion.div>    
+        </div>
     </motion.section> 
 );
 
