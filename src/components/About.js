@@ -68,17 +68,17 @@ return (
     <motion.section
     id="about"
     initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, type: "spring" }}
-    viewport={{ once: false, amount: 0.2 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2, type: "spring" }}
+    viewport={{ once: true, amount: 0.2 }}
     className="about-section"
     >
     <div className="about-content">
         <motion.div
         className="about-images"
         initial={{ opacity: 0, x: -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.2, delay: 0.2, type: "spring" }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.2, type: "spring" }}
         viewport={{ once: false, amount: 0.4 }}
         >
         {images.map((img, idx) => (
@@ -88,18 +88,18 @@ return (
             alt={img.alt}
             className={`about-img about-img${idx + 1}`}
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 + idx * 0.1, type: "spring" }}
-            viewport={{ once: false, amount: 0.4 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
+            viewport={{ once: false, amount: 0.3 }}
             />
         ))}
         </motion.div>
         <motion.div
         className="about-text"
         initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.2, delay: 0.3, type: "spring" }}
-        viewport={{ once: false, amount: 0.4 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.2, type: "spring" }}
+        viewport={{ once: false, amount: 0.3 }}
         >
         <h2>Educación y experiencia</h2>
         <p>
