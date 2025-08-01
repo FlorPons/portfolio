@@ -7,7 +7,7 @@ const projectsData = [
         description: "Este proyecto es una fintech diseñada y desarrollada mediante la simulación laboral de No Country. En ella trabajé con otro desarrollador frontend, un diseñador UX/UI, tres desarrolladores backend y un PM. Fue una experiencia emocionante, desafiante y enriquecedora. Aprendí a trabajar en equipo, a comunicarme con otros desarrolladores y a resolver problemas de manera eficiente.",  
         technologies: "React, react-hook-form, Zod, zustand,Taillwind, PrimeReact, HTML5,CSS3,TypeScript",  
         image: <img src={process.env.PUBLIC_URL + "/images/CapyBanck.png"} alt="Imagen de la app CapyBanck" className="project-image" />,  
-        link: "https://capybank.vercel.app/"  
+        link: "https://florpons.github.io/CapyBankFront/"  
     },  
     {  
         title: "Plant Disease Detector (Vision Computer)",  
