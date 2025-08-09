@@ -28,7 +28,7 @@ const projectsData = [
         description: "Cute Paws es una página web de una tienda de mascotas creada en el marco del curso Full Stack Python del programa Codo a Codo 4.0.",  
         technologies: "HTLM5, CSS3, JavaScript, Boostrap",
         image: <img src= {process.env.PUBLIC_URL + "/images/CutePaws.png"} alt= "Imagen de la webapp Cute Paws" className="project-image" />,   
-        link: "https://github.com/FlorPons/CutePaws"  
+        link: "https://florpons.github.io/CutePaws/"  
     },  
     {  
         title: "Mood Melody",  
